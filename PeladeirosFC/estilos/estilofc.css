@@ -1,0 +1,18 @@
+body {
+  background-image: url(../image/estadio1.jpg);
+
+  font-family: 'Roboto', sans-serif;
+  margin:auto;
+  padding: 0;
+
+}
+ .logo{
+   background-image: url(../image/logos.jpg) ;
+   background-repeat: no-repeat;
+     height: 232px;
+     margin: auto;
+     padding-top: 20px;
+     margin-left:450px;
+     margin-bottom: -235px
+ }
+/*# sourceMappingURL=estilofc.css.map */

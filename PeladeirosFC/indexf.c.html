@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Peladeitos F.C</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="estilos/estil.css" />
+    <link rel="stylesheet" href="estilos/estilofc.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/shieldui-all.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <script src="gridData.js"></script>
+    <script src="geral.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* MENU DAQUI PARA BAIXO*/
+        .menu{
+            width: 100%;
+            height: 30px;
+            background-image: url(../image/estadio1.jpg);
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin-top: 230px;
+            margin-left: 19%;
+        }
+        .menu ul{
+            list-style: none;
+            position: relative;
+
+        }
+        .menu ul li{
+            width: 150px;
+            float: left;
+        }
+        .menu a{
+
+            padding: 5px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background-color:  rgb(27, 27, 27);
+
+            color: #edbe00;
+        }
+        .menu ul ul{
+            position: absolute;
+            visibility: hidden;
+        }
+        .menu ul li:hover ul{
+            visibility: visible;
+        }
+        .menu a:hover{
+            background-color:#edbe00;
+            color: rgb(27, 27, 27);
+        }
+        .menu ul ul li{
+            float: none;
+            border-bottom: solid 1px #c6c6c6;
+        }
+        .menu ul ul li a{
+          background: rgb(97, 97, 97);
+
+        }
+
+        label[for="bt_menu"]{
+            padding: 10px;
+            /* background-color: #000000;*/
+            color: #edbe00;
+            font-family: 'Roboto', sans-serif;
+            text-align:left;
+            font-size: 23px;
+            cursor: pointer;
+            margin-left: 5px;
+            width: 20px;
+            height: 12px;
+        }
+
+        #bt_menu{
+            display: none;
+        }
+        label[for="bt_menu"]{
+            display: none;
+        }
+
+        @media(max-width: 719px){
+            label[for="bt_menu"]{
+                display: block;
+                margin-top: 210px;
+
+            }
+            #bt_menu:checked ~ .menu{
+                margin-left: 0;
+
+            }
+            .menu {
+
+                margin-top: 5px;
+                margin-left: -800px;
+                transition: all .2s;
+            }
+            .menu ul li{
+                margin-top: 2px;
+
+                width: 100%;
+                float: none;
+            .menu a{
+                margin-left: 25px;
+                padding: 3px;
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                background-color: #000000;
+                margin-top: 3px;
+
+                color: #edbe00;
+            }
+            }
+            .menu ul ul{
+
+                position: static;
+                overflow: hidden;
+                max-height: 0;
+                transition: all  .4s;
+            }
+            .menu ul li:hover ul{
+                height: auto;
+                max-height: 350px;
+
+            }
+
+        }
+        @media(max-width: 719px){
+            label[for="bt_menu"]{
+                display: block;
+                margin-top: 190px;
+                margin-bottom: 24px;
+            }
+            #bt_menu:checked ~ .menu{
+                margin-left: 0;
+            }
+            .menu {
+
+                margin-top: 5px;
+                margin-left: -800px;
+                transition: all .2s;
+            }
+            .menu ul li{
+
+                height: 50%;
+                width: 50%;
+                float: none;
+            }
+            .menu ul ul{
+                position: static;
+                overflow: hidden;
+                height: 200%;
+                width:200%;
+                transition: all  .4s;
+            }
+            .menu ul li:hover ul{
+                height: auto;
+                max-height: 350px;
+
+            }
+
+        }
+        /* FIM DO MENU*/
+
+        /* RODAPÉ DAQUI PARA BAIXO*/
+        .rodape {width: 100%; float: left; padding: 1% 41% 7%; text-align: center;background: black;opacity: 0.7; margin-top: 3% ; height: 90px;}
+        .social-icons a{ font-size: 1.5em; color: #edbe00; text-align: center; margin-left: 20px;  margin-right: 3%;}
+        .copyright {margin-top: 1%; color: #edbe00; text-align: center;}
+
+
+        @media(max-width: 719px){
+            /*rodapé*/
+          .rodape{
+
+              padding: 5% 1%;
+              margin-top:14%;
+              height: 98px;
+          }
+            .ranking{
+         margin-top: 35%;
+            padding-top: 50px;
+                     }
+           .logo{
+
+               margin-left: -56px;
+           }
+                   }
+
+
+
+        /* PROPAGANDA DAQUI PARA BAIXO*/
+        main section.galeria {
+            padding-top: 7%;
+            margin:auto;
+            width: 640px;
+            height: 253px;
+            position: relative;
+            overflow: hidden;
+        }
+        main section img.foto {
+
+            position: absolute;
+            opacity: 0;
+            animation-name: animacao;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes animacao {
+
+            25% {
+                opacity: 1;
+                transform: scale(1.1, 1.1);
+            }
+            50% {
+                opacity: 0;
+
+            }
+        }
+
+        .foto:nth-child(1) {
+
+        }
+
+        .foto:nth-child(2) {
+            animation-delay: 5s;
+        }
+
+        .foto:nth-child(3) {
+            animation-delay: 10s;
+        }
+
+        .foto:nth-child(4) {
+            animation-delay: 15s;
+        }
+         /*ranking*/
+        .section{
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            background-color: #111111;
+            color: #ccc;
+            border-top: solid 3px #1E97E3;
+            height: 50px;
+        }
+
+
+        .menuitem {
+            margin-top: 12px;
+            display: inline-block;
+            width: 100px;
+        }
+
+        .menulink {
+            height: 40px;
+            padding: 7px;
+            border-bottom: 3px solid transparent;
+        }
+
+        .menulink:hover {
+            border-bottom: 3px solid #1E97E3;
+            text-decoration: none;
+            color: #1E97E3;
+        }
+
+        .footer {
+            margin-top: 12px;
+        }
+
+        .liitem {
+            height: 45px;
+        }
+
+        .skillLine {
+            display: inline-block;
+            width: 100%;
+            min-height: 90px;
+            padding: 3px 4px;
+        }
+
+        .skillLineDefault {
+            padding: 3px 4px;
+        }
+
+        div.skill {
+            background: #F58723;
+            border-radius: 3px;
+            color: white;
+            font-weight: bold;
+            padding: 3px 4px;
+            width: 70px;
+        }
+
+        .rating {
+            margin-left: 30px;
+        }
+
+        .footerQR {
+            margin-left: 30%;
+        }
+
+        .leftText {
+            font-size: 41px;
+        }
+
+        .rightText {
+            font-size: 41px;
+            background: #F58723;
+            border-radius: 3px;
+            color: white;
+            padding: 3px 4px;
+
+    </style>
+</head>
+<body>
+<header class="logo" >
+
+</header>
+
+<input type="checkbox" id="bt_menu">
+<label for="bt_menu">&#9776;</label>
+<nav class="menu">
+    <ul>
+        <li><a   href="#">Home</a></li>
+        <li><a   href="#">Perfil</a>
+            <ul>
+                <li><a   href="#">Jogador</a></li>
+                <li><a   href="#">Escalação</a></li>
+                <li><a   href="#">Campo</a></li>
+            </ul>
+        </li>
+        <li><a   href="#">Perfil Edit.</a>
+            <ul>
+                <li><a   href="#">Jogador</a></li>
+                <li><a   href="#">Escalação</a></li>
+            </ul></li>
+        <li><a   href="#">Login</a>
+            <ul>
+                <li><a   href="#"> <label>
+                    <input name="txtName" type="text" style="width:135px; margin-bottom:1%" id="txtName" pattern="[A-Za-z]{3}" placeholder="Nome" maxlength="20">
+                </label></a></li>
+                <li><a   href="#"><label>
+                    <input name="add_senha" type="password" style="width:135px; margin-bottom:1%" id="add_senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Senha" maxlength="20">
+                </label></a></li>
+                <li><a   href="#"><label>
+                    <input type="submit" name="Acessar" value="Acessar" style="width:70px; margin-bottom:3%;"  id="Acessar" onclick="alert('Seja bem Vindo!')">
+                </label></a></li>
+            </ul></li>
+        <li><a   href="#" style="width: 200px;">Entre no PeladeirosFC</a></li>
+    </ul>
+</nav>
+
+
+<main class="conteudo">
+
+        <section  class="ranking"    >
+            <table align="center">
+                <tr>
+                    <td colspan="7" class="header"><h1> Ramking 2018</h1></td>
+                </tr>
+                <tr>
+                    <th style="text-align: center;">Pos</th>
+                    <th style="text-align: center;" >Jogador</th>
+                    <th style="text-align: center;">P</th>
+                    <th style="text-align: center;">W</th>
+                    <th style="text-align: center;">L</th>
+                    <th style="text-align: center;">D</th>
+                    <th style="text-align: center;">Pts</th>
+                </tr>
+                <tr data-toggle="modal" data-target="#myModal">
+                    <td style="padding: 9px;">1</td>
+                    <td>Felipe Dias</td>
+                    <td>25</td>
+                    <td>18</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>70</td>
+                </tr>
+                <tr data-toggle="modal" data-target="#myModal2">
+                    <td style="padding: 9px;">2</td>
+                    <td>Nemias Carvalho</td>
+                    <td>20</td>
+                    <td>14</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>65</td>
+                </tr>
+                <tr  data-toggle="modal" data-target="#myModal3">
+                    <td style="padding: 9px;">3</td>
+                    <td>Renato Nobrega</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>55</td>
+                </tr>
+            </table>
+        </section>
+<!-- MODAL INICIO-->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="container">
+                    <br />
+
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="text-center">Perfil do Usuário<span class="glyphicon glyphicon-user pull-right"></span></h4>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p class="lead">
+                                        <strong>Felipe Dias</strong>
+                                    </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item liitem"><strong>Estado:</strong>
+                                        <span class="pull-right">Paraíba</span>
+                                    </li>
+                                    <li class="list-group-item liitem"><strong>Cidade:</strong>
+                                        <span class="pull-right">João Pessoa</span>
+                                    </li>
+                                    <li class="list-group-item liitem"><strong>Campo Oficial:</strong>
+                                        <span class="pull-right">Campo dos amigos</span>
+                                    </li>
+                                    <li class="list-group-item liitem"><strong>Posição:</strong>
+                                        <span class="pull-right">Atacante</span>
+                                    </li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-3 col-md-4 col-lg-2">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-4 col-md-4 col-lg-4" id="qr1">
+                                        </div>
+                                        <div class="col-xs-6 col-sm-5 col-md-4 col-lg-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="text-center">Habilidades<span class="glyphicon glyphicon-saved pull-right"></span></h4>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p class="lead">
+                                        <strong>Ataque</strong>
+                                    </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Ataque</div>
+                                            <div class="rating" id="rate1"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Defesa</div>
+                                            <div class="rating" id="rate2"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Força</div>
+                                            <div class="rating" id="rate3"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Inteligência</div>
+                                            <div class="rating" id="rate4"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-3 col-md-4 col-lg-2">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-4 col-md-4 col-lg-4" id="qr2">
+                                        </div>
+                                        <div class="col-xs-6 col-sm-5 col-md-4 col-lg-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="container">
+                    <br />
+
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="text-center">Perfil do Usuário<span class="glyphicon glyphicon-user pull-right"></span></h4>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p class="lead">
+                                        <strong>Neemias Carvalho</strong>
+                                    </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item liitem"><strong>Estado:</strong>
+                                        <span class="pull-right">Pernambuco</span>
+                                    </li>
+                                    <li class="list-group-item liitem"><strong>Cidade:</strong>
+                                        <span class="pull-right">Recife</span>
+                                    </li>
+                                    <li class="list-group-item liitem"><strong>Campo Oficial:</strong>
+                                        <span class="pull-right">Tijipió Clube</span>
+                                    </li>
+                                    <li class="list-group-item liitem"><strong>Posição:</strong>
+                                        <span class="pull-right">Goleiro</span>
+                                    </li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-3 col-md-4 col-lg-2">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-4 col-md-4 col-lg-4" id="qr3">
+                                        </div>
+                                        <div class="col-xs-6 col-sm-5 col-md-4 col-lg-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="text-center">Habilidades<span class="glyphicon glyphicon-saved pull-right"></span></h4>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p class="lead">
+                                        <strong>Defesa</strong>
+                                    </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Ataque</div>
+                                            <div class="rating" id="rate5"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Defesa</div>
+                                            <div class="rating" id="rate6"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Força</div>
+                                            <div class="rating" id="rate7"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Inteligência</div>
+                                            <div class="rating" id="rate8"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-3 col-md-4 col-lg-2">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-4 col-md-4 col-lg-4" id="qr4">
+                                        </div>
+                                        <div class="col-xs-6 col-sm-5 col-md-4 col-lg-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="container">
+                    <br />
+
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="text-center">Perfil do Usuário<span class="glyphicon glyphicon-user pull-right"></span></h4>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p class="lead">
+                                        <strong>Renato Nobrega</strong>
+                                    </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item liitem"><strong>Estado:</strong>
+                                        <span class="pull-right">Alagoas</span>
+                                    </li>
+                                    <li class="list-group-item liitem"><strong>Cidade:</strong>
+                                        <span class="pull-right">Maceió</span>
+                                    </li>
+                                    <li class="list-group-item liitem"><strong>Campo Oficial:</strong>
+                                        <span class="pull-right">Mangabeiras beach</span>
+                                    </li>
+                                    <li class="list-group-item liitem"><strong>Posição:</strong>
+                                        <span class="pull-right">Centroavante</span>
+                                    </li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-3 col-md-4 col-lg-2">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-4 col-md-4 col-lg-4" id="qr5">
+                                        </div>
+                                        <div class="col-xs-6 col-sm-5 col-md-4 col-lg-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="text-center">Habilidades<span class="glyphicon glyphicon-saved pull-right"></span></h4>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p class="lead">
+                                        <strong>Inteligência</strong>
+                                    </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Ataque</div>
+                                            <div class="rating" id="rate9"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Defesa</div>
+                                            <div class="rating" id="rate10"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Força</div>
+                                            <div class="rating" id="rate11"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item liitem">
+                                        <div class="skillLineDefault">
+                                            <div class="skill pull-left text-center">Inteligência</div>
+                                            <div class="rating" id="rate12"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-3 col-md-4 col-lg-2">
+                                        </div>
+                                        <div class="col-xs-2 col-sm-4 col-md-4 col-lg-4" id="qr6">
+                                        </div>
+                                        <div class="col-xs-6 col-sm-5 col-md-4 col-lg-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL FIM-->
+
+    <section class="galeria">
+        <img class="foto" src="image/cocacola1.jpg" />
+        <img class="foto" src="image/adidas1.jpg" />
+        <img class="foto" src="image/heineken.jpg" />
+        <img class="foto" src="image/Everlast.jpg" />
+    </section>
+</main>
+
+<footer class="rodape">
+    <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+    <p class="copyright"> Copyright © Peladeiros.<br /> Todos os direitos reservados. </p>
+</footer>
+</body>
+
+<script type="text/javascript">
+    initializeRatings();
+    initializeQR1();
+    initializeQR2();
+    initializeQR3();
+    initializeQR4();
+    initializeQR5();
+    initializeQR6();
+    initializeChart1();
+    initializeGrid1();
+    initializeProgress1();
+    initializeSparkline1();
+    initializeSparkline2();
+    initializeSparkline3();
+
+    function initializeProgress1() {
+        $("#progress1").shieldProgressBar({
+            min: 0,
+            max: 100,
+            value: 87,
+            layout: "circular",
+            layoutOptions: {
+                circular: {
+                    borderColor: "#FF7900",
+                    width: 17,
+                    borderWidth: 3,
+                    color: "#1E98E4",
+                    backgroundColor: "transparent"
+                }
+            },
+            text: {
+                enabled: true,
+                template: '<span style="font-size:52px;color:#1E98E4;">{0:n0}%</span> '
+            }
+        });
+    }
+
+    function initializeGrid1() {
+        $("#grid1").shieldGrid({
+            dataSource: {
+                data: gridData
+            },
+            sorting: {
+                multiple: false
+            },
+            paging: {
+                pageSize: 8,
+                pageLinksCount: 10
+            },
+            selection: {
+                type: "row",
+                multiple: true,
+                toggle: false
+            },
+            columns: [
+                { field: "id", title: "ID" },
+                { field: "name", title: "Person Name" },
+                { field: "company", title: "Company Name" },
+                { field: "email", title: "Email Address" }
+            ]
+        });
+    }
+
+    function initializeChart1() {
+        var data1 = getRandomArray(20, 1, 50);
+        var data2 = getRandomArray(20, 20, 70);
+
+        $("#chart1").shieldChart({
+            theme: "light",
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            primaryHeader: {
+                text: "Performance Data"
+            },
+            tooltipSettings: {
+                axisMarkers: {
+                    enabled: true,
+                    mode: 'x',
+                    width: 2,
+                    zIndex: 3,
+                    drawColor: "white"
+                }
+            },
+            dataSeries: [
+                {
+                    seriesType: 'bar',
+                    collectionAlias: 'Achieved',
+                    data: data1
+                },
+                {
+                    seriesType: 'line',
+                    collectionAlias: 'Target',
+                    data: data2
+                }
+            ]
+        });
+    }
+
+    function initializeSparkline1() {
+        var data1 = getRandomArray(70, 1, 100);
+
+        $("#sparkline1").shieldChart({
+            theme: "light",
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            tooltipSettings: {
+                chartBound: true,
+                axisMarkers: {
+                    enabled: true,
+                    mode: 'x'
+                },
+                customHeaderText: '',
+                customPointText: function (point, chart) {
+                    return shield.format(
+                            '<span><b>{value}</b></span>',
+                            {
+                                value: point.y
+                            }
+                    );
+                },
+            },
+            chartAreaPaddingTop: -7,
+            chartLegend: {
+                enabled: false
+            },
+            seriesSettings: {
+                line: {
+                    activeSettings: {
+                        pointHoveredState: {
+                            enabled: false
+                        }
+                    },
+                    pointMark: {
+                        enabled: false
+                    }
+                }
+            },
+            axisX: {
+                axisTickText: {
+                    enabled: false
+                },
+                plotStripWidth: 0,
+                drawWidth: 0,
+                ticksWidth: 0,
+                ticksHeight: 0
+            },
+            axisY: {
+                axisTickText: {
+                    enabled: false
+                },
+                plotStripWidth: 0,
+                drawWidth: 0,
+                ticksWidth: 0
+            },
+            dataSeries: [{
+                seriesType: "line",
+                data: data1
+            }
+            ]
+        });
+    }
+
+    function initializeSparkline2() {
+        var data1 = getRandomArray(70, 1, 100);
+
+        $("#sparkline2").shieldChart({
+            theme: "light",
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            tooltipSettings: {
+                chartBound: true,
+                axisMarkers: {
+                    enabled: true,
+                    mode: 'x'
+                },
+                customHeaderText: '',
+                customPointText: function (point, chart) {
+                    return shield.format(
+                            '<span><b>{value}</b></span>',
+                            {
+                                value: point.y
+                            }
+                    );
+                },
+            },
+            chartAreaPaddingTop: -7,
+            chartLegend: {
+                enabled: false
+            },
+            seriesSettings: {
+                bar: {
+                    activeSettings: {
+                        pointHoveredState: {
+                            enabled: false
+                        }
+                    },
+                    pointMark: {
+                        enabled: false
+                    }
+                }
+            },
+            axisX: {
+                axisTickText: {
+                    enabled: false
+                },
+                plotStripWidth: 0,
+                drawWidth: 0,
+                ticksWidth: 0,
+                ticksHeight: 0
+            },
+            axisY: {
+                axisTickText: {
+                    enabled: false
+                },
+                plotStripWidth: 0,
+                drawWidth: 0,
+                ticksWidth: 0
+            },
+            dataSeries: [{
+                seriesType: "bar",
+                data: data1
+            }
+            ]
+        });
+    }
+
+    function initializeSparkline3() {
+        var data1 = getRandomArray(70, 1, 100);
+
+        $("#sparkline3").shieldChart({
+            theme: "light",
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            tooltipSettings: {
+                chartBound: true,
+                axisMarkers: {
+                    enabled: true,
+                    mode: 'x'
+                },
+                customHeaderText: '',
+                customPointText: function (point, chart) {
+                    return shield.format(
+                            '<span><b>{value}</b></span>',
+                            {
+                                value: point.y
+                            }
+                    );
+                },
+            },
+            chartAreaPaddingTop: -7,
+            chartLegend: {
+                enabled: false
+            },
+            seriesSettings: {
+                area: {
+                    activeSettings: {
+                        pointHoveredState: {
+                            enabled: false
+                        }
+                    },
+                    pointMark: {
+                        enabled: false
+                    }
+                }
+            },
+            axisX: {
+                axisTickText: {
+                    enabled: false
+                },
+                plotStripWidth: 0,
+                drawWidth: 0,
+                ticksWidth: 0,
+                ticksHeight: 0
+            },
+            axisY: {
+                axisTickText: {
+                    enabled: false
+                },
+                plotStripWidth: 0,
+                drawWidth: 0,
+                ticksWidth: 0
+            },
+            dataSeries: [{
+                seriesType: "area",
+                data: data1
+            }
+            ]
+        });
+    }
+
+    function initializeQR1() {
+        $("#qr1").shieldQRcode({
+            mode: "byte",
+            size: 150,
+            value: "Felipe Dias",
+            style: {
+                color: "#1E97E3"
+            }
+        });
+    }
+
+    function initializeQR1() {
+        $("#qr1").shieldQRcode({
+            mode: "byte",
+            size: 150,
+            value: "Felipe Dias",
+            style: {
+                color: "#1E97E3"
+            }
+        });
+    }
+
+    function initializeQR2() {
+        $("#qr2").shieldQRcode({
+            mode: "byte",
+            size: 150,
+            value: "Avarage: 6.3",
+            style: {
+                color: "#1E97E3"
+            }
+        });
+    }
+
+    function initializeQR3() {
+        $("#qr3").shieldQRcode({
+            mode: "byte",
+            size: 150,
+            value: "Neemias Carvalho",
+            style: {
+                color: "#1E97E3"
+            }
+        });
+    }
+
+    function initializeQR4() {
+        $("#qr4").shieldQRcode({
+            mode: "byte",
+            size: 150,
+            value: "Avarage: 6.3",
+            style: {
+                color: "#1E97E3"
+            }
+        });
+    }
+
+    function initializeQR5() {
+        $("#qr5").shieldQRcode({
+            mode: "byte",
+            size: 150,
+            value: "Renato Nobrega",
+            style: {
+                color: "#1E97E3"
+            }
+        });
+    }
+
+    function initializeQR6() {
+        $("#qr6").shieldQRcode({
+            mode: "byte",
+            size: 150,
+            value: "Avarage: 6.3",
+            style: {
+                color: "#1E97E3"
+            }
+        });
+    }
+
+    function initializeRatings() {
+
+        $('#rate1').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 6.3,
+            markPreset: false
+        });
+        $('#rate2').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 6,
+            markPreset: false
+        });
+        $('#rate3').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 4.5,
+            markPreset: false
+        });
+        $('#rate4').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 5,
+            markPreset: false
+        });
+        $('#rate5').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 6.3,
+            markPreset: false
+        });
+        $('#rate6').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 6,
+            markPreset: false
+        });
+        $('#rate7').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 4.5,
+            markPreset: false
+        });
+        $('#rate8').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 5,
+            markPreset: false
+        });
+        $('#rate9').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 6.3,
+            markPreset: false
+        });
+        $('#rate10').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 6,
+            markPreset: false
+        });
+        $('#rate11').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 4.5,
+            markPreset: false
+        });
+        $('#rate12').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 5,
+            markPreset: false
+        });
+    }
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function getRandomArray(length, min, max) {
+        var array = [];
+        for (var boudary = 0; boudary < length; boudary++) {
+            array.push(getRandomInt(min, max));
+        }
+
+        return array;
+    }
+</script>

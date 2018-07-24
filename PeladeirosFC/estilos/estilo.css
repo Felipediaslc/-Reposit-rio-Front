@@ -1,0 +1,19 @@
+.border-ranking {
+  border-style: groove;
+  border-left: 8px solid;
+  background-color: #edbe00;
+  border-radius: 7px;
+  margin: 300px 80px 80px 80px;
+}
+h2 {
+  text-align: center;
+  font-size: 20px;
+}
+.icone {
+  background: #edbe00 url(../image/icons2.png) no-repeat -95px -3px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
+}

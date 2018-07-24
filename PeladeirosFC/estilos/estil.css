@@ -1,0 +1,89 @@
+body{
+    .ranking {
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9em;
+        line-height: 2em;
+        background-image: url(../image/estadio1.jpg);
+        color: black;
+        background-size: cover;
+        background-attachment:inherit;
+
+    }
+}
+
+table{
+    margin-top: 150px;
+    margin-left: 100px;
+    border: 1px solid ;
+    border-collapse: collapse;
+    opacity: 0.95;
+    width: 85%;
+}
+th{
+    text-align: center;
+    background: black;
+    color: #ffffff;
+}
+tr:nth-child(even){
+     background: honeydew;
+ }
+tr:nth-child(odd){
+    background: #c6c6c6;
+}
+.header{
+    background: #edbe00;
+    color: black;
+}
+th,td{
+    text-align: center;
+
+}
+article{
+    overflow-x: auto;
+}
+@media(max-width: 719px){
+    body{
+    .ranking {
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9em;
+        line-height: 2em;
+        background-image: url(../image/estadio1.jpg);
+        color: black;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+table{
+    margin-top: 100px;
+    margin-left: 20px;
+    border: 1px solid ;
+    border-collapse: collapse;
+    opacity: 0.95;
+    width: 90%;
+}
+th{
+
+    background: black;
+    color: #ffffff;
+}
+tr:nth-child(even){
+    background: honeydew;
+}
+tr:nth-child(odd){
+    background: #c6c6c6;
+}
+.header{
+    background: #edbe00;
+    color: black;
+}
+th,td{
+    text-align: center;
+    padding: 7px;
+}
+article{
+    overflow-x: auto;
+}
+}
